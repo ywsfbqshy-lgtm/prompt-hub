@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🚀 Prompt Hub Studio | شارك أمر جديد</title>
+  <meta name="description" content="انشر ونشر أفضل أوامر الذكاء الاصطناعي التي جربتها مع زملائك">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation Header -->
+  <header class="navbar">
+    <a href="index.html" class="nav-brand">
+      <div class="brand-icon">🚀</div>
+      <span>Prompt Hub</span>
+    </a>
+
+    <div class="nav-links">
+      <a href="index.html" class="btn btn-secondary btn-sm">
+        🏠 الصفحة الرئيسية
+      </a>
+      <button class="btn btn-secondary btn-sm" id="theme-toggle-btn" onclick="toggleTheme()">
+        🌙 داكن
+      </button>
+    </div>
+  </header>
+
+  <!-- Studio Main Form -->
+  <main class="container">
+    <div style="margin-bottom: 1.5rem; text-align: center;">
+      <h1 style="font-size: 1.6rem; font-weight: 800; margin-bottom: 0.4rem;">شارك أفضل أمر لديك 🚀</h1>
+      <p style="color: var(--text-secondary); font-size: 0.95rem;">انشر تجربتك ليستفيد منها جميع الطلاب في الجامعة والمجتمع</p>
+    </div>
+
+    <div class="form-card">
+      <form id="publish-prompt-form">
+        <div class="form-group">
+          <label class="form-label">اسم الناشر / الكاتب *</label>
+          <input type="text" id="author-name" class="form-input" placeholder="مثال: أحمد المتولي" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">عنوان الـ Prompt *</label>
+          <input type="text" id="prompt-title" class="form-input" placeholder="مثال: أمر مذهل لإنشاء خطة مذاكرة جامعية" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">التخصص / المجـال *</label>
+          <select id="prompt-category" class="form-select">
+            <option value="Education">📚 التعليم والطلاب</option>
+            <option value="Programming">💻 البرمجة والتطوير</option>
+            <option value="Marketing">📈 التسويق والأعمال</option>
+            <option value="Design">🎨 التصميم والواجهات</option>
+            <option value="Research">🔬 البحوث والتحليل</option>
+            <option value="AI">🤖 الذكاء الاصطناعي العامة</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">الوصف الموجز *</label>
+          <input type="text" id="prompt-description" class="form-input" placeholder="شرح مختصر لكيفية فائدة هذا الـ Prompt والمخرجات المتوقعة منه..." required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">نص الـ Prompt الأصلي * (الذي سيتم نسخه)</label>
+          <textarea id="prompt-text" class="form-textarea" rows="6" placeholder="اكتب أمر الذكاء الاصطناعي هنا بأقصى دقة ووضوح..." required style="font-family: var(--font-code);"></textarea>
+        </div>
+
+        <button type="submit" id="submit-btn" class="btn btn-primary btn-lg btn-block" style="margin-top: 1rem;">
+          🚀 نشر الأمر وحفظه في SQLite
+        </button>
+      </form>
+    </div>
+  </main>
+
+  <!-- Frontend JavaScript -->
+  <script src="js/app.js"></script>
+</body>
+</html>
